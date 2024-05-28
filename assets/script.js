@@ -99,11 +99,11 @@ const getPrize = async () => {
       title: "Zhongli",
     },
     {
-      image: "/assets/reward/zhongli.png",
+      image: "/assets/reward/childe.png",
       title: "Tartaglia",
     },
     {
-      image: "/assets/reward/zhongli.png",
+      image: "/assets/reward/kakanda.png",
       title: "Kakanda",
     }
   ];
