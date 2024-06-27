@@ -19,16 +19,10 @@
     </div>
 </body>
 <script>
-    if (window.location.hash) {
-        const hash = window.location.hash.slice(1);
-        const param = new URLSearchParams(hash);
-        if (param) {
-            const access_token = param.get("access_token");
-            if (access_token) {
-                document.querySelector("#token").insertAdjacentText("beforeend", access_token);
-            }
-        }
-    }
+    const hash = window.location.hash;
+    const param = hash ? new URLSearchParams(hash.slice(1)) : null;
+    const access_token = param ? param.get("access_token") : null;
+    document.querySelector("#token").insertAdjacentText("beforeend", access_token ?? "No token found");
 </script>
 
 </html>
